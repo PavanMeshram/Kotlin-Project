@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/button_persistent_sheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Expand Persistent Bottom Sheet" />
+        <Button
+            android:id="@+id/button_dialog_sheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Show Bottom Sheet" />
+
+        <Button
+            android:id="@+id/tindr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tinder"
+            android:layout_gravity="center_horizontal"
+            android:onClick="btn_tinder"/>
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <!--<Button
+            android:id="@+id/facebook_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_corners"
+            android:drawableStart="@drawable/facebook_icon"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            android:text="Log in with Facebook"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" /> -->
+
+
+        <!--<com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />-->
+
+        <Button
+            android:id="@+id/facebook_login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Log in with Facebook"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/activity_bottom_sheet" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
