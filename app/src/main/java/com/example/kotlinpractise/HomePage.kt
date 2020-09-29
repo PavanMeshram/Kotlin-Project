@@ -37,6 +37,7 @@ class HomePage : AppCompatActivity() {
         val textEmailGoogle = findViewById<TextView>(R.id.textEmailGoogle)
         val textIdGoogle = findViewById<TextView>(R.id.textIdGoogle)
         val imageViewGoogle = findViewById<ImageView>(R.id.imageViewGoogle)
+        val textTokenGoogle = findViewById<TextView>(R.id.textTokenGoogle)
         //signOut = findViewById<View>(R.id.btn_signOut) as Button
 
         val acct = GoogleSignIn.getLastSignedInAccount(this)
@@ -44,6 +45,8 @@ class HomePage : AppCompatActivity() {
             textNameGoogle.text = acct.displayName
             textEmailGoogle.text = acct.email
             textIdGoogle.text = acct.id
+            textTokenGoogle.text = acct.idToken
+            Log.d("Debug", "Google Token" + textTokenGoogle.text)
         }
 
         //Facebook Sign In
