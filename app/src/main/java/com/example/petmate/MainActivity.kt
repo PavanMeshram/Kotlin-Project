@@ -1,18 +1,15 @@
-package com.example.kotlinpractise
+package com.example.petmate
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.facebook.*
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
-import com.facebook.login.widget.LoginButton
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -20,15 +17,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-import kotlinx.android.synthetic.main.activity_bottom_sheet.*
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class MainActivity : AppCompatActivity() {
-
-    //Bottom Sheet Behavior
-    private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
 
     //Google Sign In
     lateinit var gso: GoogleSignInOptions
@@ -53,38 +44,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Bottom Sheet Behavior
-        bottomSheetBehavior = BottomSheetBehavior.from(bottom_sheet)
-
-        button_persistent_sheet.setOnClickListener {
-            bottomSheetBehavior.state =
-                if (bottomSheetBehavior.state == BottomSheetBehavior.STATE_EXPANDED)
-                    BottomSheetBehavior.STATE_COLLAPSED else BottomSheetBehavior.STATE_EXPANDED
-        }
-
-        bottomSheetBehavior.addBottomSheetCallback(object :
-            BottomSheetBehavior.BottomSheetCallback() {
-            override fun onSlide(bottomSheet: View, slideOffset: Float) {
-
-            }
-
-            override fun onStateChanged(bottomSheet: View, newState: Int) {
-                button_persistent_sheet.text = when (newState) {
-                    BottomSheetBehavior.STATE_EXPANDED -> "Close Persistent Bottom Sheet"
-                    BottomSheetBehavior.STATE_COLLAPSED -> "Open Persistent Bottom Sheet"
-                    else -> "Bottom Sheet State Changing"
-                }
-            }
-
-        })
-
-        button_dialog_sheet.setOnClickListener {
-            MyDialogBottomSheet().show(
-                supportFragmentManager,
-                ""
-            )
-        }
-
         //Google Sign In
         signIn = findViewById(R.id.sign_in_button)
 
@@ -99,15 +58,12 @@ class MainActivity : AppCompatActivity() {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
         sign_in_button.setSize(SignInButton.SIZE_WIDE)
-        signIn.setOnClickListener { view: View? ->
+        signIn.setOnClickListener {
             signIn()
         }
 
         //Facebook Sign In
         callbackManager = CallbackManager.Factory.create()
-
-        //LoginManager.getInstance()
-        //  .logInWithReadPermissions(this, Arrays.asList("public_profile", "email"))
 
         if (isLoggedIn()) {
             //fbLogin()
@@ -119,10 +75,6 @@ class MainActivity : AppCompatActivity() {
             Log.d("LoggedIn?: ", "NO")
             //show the Home Activity
         }
-
-        //val accessToken = AccessToken.getCurrentAccessToken()
-        //val isLoggedIn = accessToken != null && !accessToken.isExpired
-        //val loginButtonFB = findViewById<Button>(R.id.facebook_login_btn)
 
         facebook_login_btn.setOnClickListener {
             //facebookLogin()
@@ -147,13 +99,12 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this@MainActivity, exception.message, Toast.LENGTH_LONG).show()
                 }
             })
-    } //close onCreate Method
 
-    //Tinder
-    fun btn_tinder(view: View) {
-        val intent = Intent(this, Tinder::class.java)
-        startActivity(intent)
-    }
+        btn_petRegistration.setOnClickListener {
+            val myIntent = Intent(this, PetRegistration::class.java)
+            startActivity(myIntent)
+        }
+    } //close onCreate Method
 
     //Google Sign In
     private fun signIn() {
@@ -165,13 +116,13 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         //Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...)
         if (requestCode == RC_SIGN_IN) {
-            //The task returened from this call is always completed, no need to attach a listener
+            //The task returned from this call is always completed, no need to attach a listener
             val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
             handleSignInResult(task)
         } else {
             callbackManager.onActivityResult(requestCode, resultCode, data)
             //callbackManager?.onActivityResult(requestCode, resultCode, data)
-            Log.d("Lets See", "malsehnnnn" + data)
+            Log.d("Lets See", "malsehnnnn$data")
         }
     }
 
@@ -219,44 +170,49 @@ class MainActivity : AppCompatActivity() {
                     id = "Not exists"
                 }
 
-                //Facebook First Name
-                /*if (jsonObject.has("first_name")) {
-                    val facebookFirstName = jsonObject.getString("first_name")
-                    Log.i("Facebook First Name: ", facebookFirstName)
-                    firstName = facebookFirstName
+                /*
+                Facebook First Name
+                if (jsonObject.has("first_name")) {
+                val facebookFirstName = jsonObject.getString("first_name")
+                Log.i("Facebook First Name: ", facebookFirstName)
+                firstName = facebookFirstName
                 } else {
-                    Log.i("Facebook First Name: ", "Not exists")
-                    firstName = "Not exists"
-                }*/
+                Log.i("Facebook First Name: ", "Not exists")
+                firstName = "Not exists"
+                }
+                */
 
-                //Facebook Middle Name
-                /*if (jsonObject.has("middle_name")) {
-                    val facebookMiddleName = jsonObject.getString("middle_name")
-                    Log.i("Facebook Middle Name: ", facebookMiddleName)
-                    middleName = facebookMiddleName
+                /*
+                Facebook Middle Name
+                if (jsonObject.has("middle_name")) {
+                val facebookMiddleName = jsonObject.getString("middle_name")
+                Log.i("Facebook Middle Name: ", facebookMiddleName)
+                middleName = facebookMiddleName
                 } else {
-                    Log.i("Facebook Middle Name: ", "Not exists")
-                    middleName = "Not exists"
-                }*/
+                Log.i("Facebook Middle Name: ", "Not exists")
+                middleName = "Not exists"
+                }
+                */
 
-                //Facebook Last Name
-                /*if (jsonObject.has("last_name")) {
-                    val facebookLastName = jsonObject.getString("last_name")
-                    Log.i("Facebook Last Name: ", facebookLastName)
-                    lastName = facebookLastName
+                /*
+                Facebook Last Name
+                if (jsonObject.has("last_name")) {
+                val facebookLastName = jsonObject.getString("last_name")
+                Log.i("Facebook Last Name: ", facebookLastName)
+                lastName = facebookLastName
                 } else {
-                    Log.i("Facebook Last Name: ", "Not exists")
-                    lastName = "Not exists"
-                }*/
-
-                //Facebook Name
-                if (jsonObject.has("name")) {
+                Log.i("Facebook Last Name: ", "Not exists")
+                lastName = "Not exists"
+                }
+                Facebook Name
+                */
+                name = if (jsonObject.has("name")) {
                     val facebookName = jsonObject.getString("name")
                     Log.i("Facebook Name: ", facebookName)
-                    name = facebookName
+                    facebookName
                 } else {
                     Log.i("Facebook Name: ", "Not exists")
-                    name = "Not exists"
+                    "Not exists"
                 }
 
                 //Facebook Profile Pic URL
@@ -276,30 +232,24 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 //Facebook Email
-                if (jsonObject.has("email")) {
+                email = if (jsonObject.has("email")) {
                     val facebookEmail = jsonObject.getString("email")
                     Log.i("Facebook Email: ", facebookEmail)
-                    email = facebookEmail
+                    facebookEmail
                 } else {
                     Log.i("Facebook Email: ", "Not exists")
-                    email = "Not exists"
+                    "Not exists"
                 }
-
                 openDetailsActivity()
             }).executeAsync()
     }
 
-    fun isLoggedIn(): Boolean {
+    private fun isLoggedIn(): Boolean {
         val accessToken = AccessToken.getCurrentAccessToken()
-        val isLoggedIn = accessToken != null && !accessToken.isExpired
-        return isLoggedIn
+        return accessToken != null && !accessToken.isExpired
     }
 
-    fun logOutUser() {
-        LoginManager.getInstance().logOut()
-    }
-
-    fun openDetailsActivity() {
+    private fun openDetailsActivity() {
         val myIntent = Intent(this, HomePage::class.java)
         myIntent.putExtra("facebook_id", id)
         //myIntent.putExtra("facebook_first_name",firstName)
@@ -311,30 +261,4 @@ class MainActivity : AppCompatActivity() {
         myIntent.putExtra("facebook_access_token", accessToken)
         startActivity(myIntent)
     }
-
-
-    /*private fun facebookLogin() {
-        login_button.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
-            override fun onSuccess(result: LoginResult?) {
-                fbLogin()
-                //Log.d("Lets See", "Facebook Token: " + loginResult.accessToken.token)
-
-            }
-
-            override fun onCancel() {
-                Log.e("FBLOGIN_FAILD", "Cancel")
-            }
-
-            override fun onError(error: FacebookException?) {
-                Log.e("FBLOGIN_FAILD", "ERROR", error)
-            }
-
-        })
-    }*/
-
-    /*private fun fbLogin() {
-        val intent = Intent(this, HomePage::class.java)
-        startActivity(intent)
-    }*/
-
 }//Close Main Activity Method

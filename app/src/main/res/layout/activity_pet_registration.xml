@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.petmate.PetRegistration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/viewPetType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/pet_type"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/editPetType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/dog"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+        </LinearLayout> <!--Pet Type-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/viewPetName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/pet_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/editPetName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/enter_pet_name"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+        </LinearLayout> <!--Pet Name-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/viewBreed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/breed"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/editBreedName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/enter_breed_type"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+        </LinearLayout> <!--Pet Breed-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/viewGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/gender"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black" />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:textSize="18sp" />
+            </RadioGroup>
+        </LinearLayout> <!--Pet Gender-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/viewWeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:text="@string/weight"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/editWeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:hint="11 Kg"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="LabelFor,TextFields" />
+
+            <TextView
+                android:id="@+id/viewHeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:text="@string/height"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/editHeight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:hint="56 Cm"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="LabelFor,TextFields" />
+        </LinearLayout> <!--Pet Weight & Height-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/viewDOB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/estimated_dob"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/editDOB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/dd_mm_yyyy"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+        </LinearLayout> <!--Pet Date of Birth-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/viewColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/colour"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/editColor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Golden"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+        </LinearLayout> <!--Pet Colour-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+        <TextView
+            android:id="@+id/viewAboutPet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/about_pet"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black" /> <!--About Pet-->
+        <EditText
+            android:id="@+id/pet_story"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:ems="10"
+            android:gravity="top|start"
+            android:hint="@string/pet_story"
+            android:inputType="textMultiLine"
+            android:maxLength="250"
+            android:maxLines="4"
+            android:textSize="15sp"
+            android:importantForAutofill="no" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+        <TextView
+            android:id="@+id/viewBehaviour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/behaviour"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black" /> <!--Pet Behaviour-->
+        <CheckBox
+            android:id="@+id/checkKidFriendly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kid_friendly" />
+
+        <CheckBox
+            android:id="@+id/checkOtherPetFriendly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/other_pet_friendly" />
+
+        <CheckBox
+            android:id="@+id/checkPottyTrained"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/potty_trained" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/viewVaccination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/vaccination"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/Black" />
+
+            <EditText
+                android:id="@+id/editVaccination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/yes_no"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+        </LinearLayout> <!--Pet Vaccination-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+        <TextView
+            android:id="@+id/viewAddPictures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="14dp"
+            android:text="@string/add_pictures"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/Black"
+            app:drawableLeftCompat="@drawable/ic_add_pic" /> <!--Add Pictures-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+
+    </LinearLayout>
+</ScrollView>

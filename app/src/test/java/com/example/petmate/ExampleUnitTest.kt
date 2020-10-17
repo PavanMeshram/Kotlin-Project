@@ -1,4 +1,4 @@
-package com.example.kotlinpractise
+package com.example.petmate
 
 import org.junit.Test
 

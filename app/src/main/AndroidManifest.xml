@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kotlinpractise">
+    package="com.example.petmate">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,9 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivityRetro"></activity>
-        <activity android:name=".SignUpScreenRetro" />
-        <activity android:name=".Hashers" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -36,8 +33,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomePage" />
-        <activity android:name=".Tinder" />
-        <activity android:name=".BottomSheet" />
+        <activity android:name=".MyPets" />
+        <activity android:name=".PetRegistration"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

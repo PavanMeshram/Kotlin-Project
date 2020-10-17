@@ -1,9 +1,45 @@
 <resources>
-    <string name="app_name">Kotlin Practise</string>
+    <string name="app_name">PetMate</string>
 
     <string name="facebook_app_id">1198745953814515</string>
     <string name="fb_login_protocol_scheme">fb1198745953814515</string>
 
     <string name="default_web_client_id" translatable="false">445953625942-n9mf6d2avrq5140jrllko6sj40evscjl.apps.googleusercontent.com</string>
+    <string name="pet_mate">Pet Mate</string>
+    <string name="log_in_with_facebook">Log in with Facebook</string>
+    <string name="todo">TODO</string>
+    <string name="login_successful">Login Successful!!</string>
+    <string name="google_profile_details">Google Profile Details</string>
+    <string name="signout">SignOut</string>
+    <string name="facebook_profile_details">Facebook Profile Details</string>
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="picture_url">Picture URL</string>
+    <string name="email">Email</string>
+    <string name="access_token">Access Token</string>
+    <string name="todo1">TODO</string>
+    <string name="pet_type">Pet Type*</string>
+    <string name="dog">Dog</string>
+    <string name="pet_name">Pet Name</string>
+    <string name="enter_pet_name">Enter Pet Name</string>
+    <string name="breed">Breed*</string>
+    <string name="enter_breed_type">Enter Breed Type</string>
+    <string name="gender">Gender*</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="estimated_dob">Estimated DOB*</string>
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="colour">Colour*</string>
+    <string name="about_pet">About Pet</string>
+    <string name="pet_story">Pet Story</string>
+    <string name="behaviour">Behaviour</string>
+    <string name="kid_friendly">Kid Friendly</string>
+    <string name="other_pet_friendly">Other Pet Friendly</string>
+    <string name="potty_trained">Potty Trained</string>
+    <string name="vaccination">Vaccination*</string>
+    <string name="yes_no">Yes/No</string>
+    <string name="add_pictures">Add Pictures</string>
 
 </resources>

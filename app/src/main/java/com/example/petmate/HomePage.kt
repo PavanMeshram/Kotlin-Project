@@ -1,32 +1,18 @@
-package com.example.kotlinpractise
+package com.example.petmate
 
-import android.annotation.SuppressLint
-import android.app.PendingIntent.getActivity
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
-import com.facebook.*
+import androidx.appcompat.app.AppCompatActivity
 import com.facebook.login.LoginManager
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.Task
-import kotlinx.android.synthetic.main.activity_bottom_sheet.*
 import kotlinx.android.synthetic.main.activity_home_page.*
-import org.w3c.dom.Text
-import java.util.jar.Attributes
 
 class HomePage : AppCompatActivity() {
 
     //Google Sign In
-    lateinit var signOut: Button
-    var mGoogleSignInClient: GoogleSignInClient? = null
+    private var mGoogleSignInClient: GoogleSignInClient? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +22,7 @@ class HomePage : AppCompatActivity() {
         val textNameGoogle = findViewById<TextView>(R.id.textNameGoogle)
         val textEmailGoogle = findViewById<TextView>(R.id.textEmailGoogle)
         val textIdGoogle = findViewById<TextView>(R.id.textIdGoogle)
-        val imageViewGoogle = findViewById<ImageView>(R.id.imageViewGoogle)
+        //val imageViewGoogle = findViewById<ImageView>(R.id.imageViewGoogle)
         val textTokenGoogle = findViewById<TextView>(R.id.textTokenGoogle)
         //signOut = findViewById<View>(R.id.btn_signOut) as Button
 
@@ -50,7 +36,6 @@ class HomePage : AppCompatActivity() {
         }
 
         //Facebook Sign In
-
         val facebookId = intent.getStringExtra("facebook_id")
         //val facebookFirstName = intent.getStringExtra("facebook_first_name")
         //val facebookMiddleName = intent.getStringExtra("facebook_middle_name")
@@ -75,13 +60,11 @@ class HomePage : AppCompatActivity() {
     }
 
     private fun logout() {
-
         //Google Session out
         mGoogleSignInClient?.signOut()
 
         //Facebook Session out
         LoginManager.getInstance().logOut()
-
         finish()
     }
 }

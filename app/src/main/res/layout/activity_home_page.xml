@@ -8,24 +8,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login Successful!!" />
+            android:text="@string/login_successful" />
 
         <ImageView
             android:id="@+id/imageViewGoogle"
             android:layout_width="100dp"
-            android:layout_height="100dp" />
+            android:layout_height="100dp"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Google Profile Details" />
+            android:text="@string/google_profile_details" />
 
         <TextView
             android:id="@+id/textNameGoogle"
@@ -51,18 +52,18 @@
             android:id="@+id/btn_signOut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SignOut" />
+            android:text="@string/signout" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Facebook Profile Details" />
+            android:text="@string/facebook_profile_details" />
 
         <TextView
             android:id="@+id/facebook_id_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ID"
+            android:text="@string/id"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="22sp"
@@ -195,7 +196,7 @@
             android:id="@+id/facebook_name_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="@string/name"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="22sp"
@@ -229,7 +230,7 @@
             android:id="@+id/facebook_profile_picture_url_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Picture URL"
+            android:text="@string/picture_url"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="22sp"
@@ -263,7 +264,7 @@
             android:id="@+id/facebook_email_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="@string/email"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="22sp"
@@ -297,7 +298,7 @@
             android:id="@+id/facebook_access_token_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Access Token"
+            android:text="@string/access_token"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="22sp"
