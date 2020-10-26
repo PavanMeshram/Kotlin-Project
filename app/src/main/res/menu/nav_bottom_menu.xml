@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuFeed"
+        android:icon="@drawable/ic_feed"
+        android:title="@string/feed" />
+
+    <item
+        android:id="@+id/menuTinder"
+        android:icon="@drawable/ic_tinder"
+        android:title="@string/tinder" />
+
+    <item
+        android:id="@+id/menuAdd"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add" />
+
+    <item
+        android:id="@+id/menuAdopt"
+        android:icon="@drawable/ic_adopt"
+        android:title="@string/adopt" />
+
+    <item
+        android:id="@+id/menuFood"
+        android:icon="@drawable/ic_food"
+        android:title="@string/food" />
+</menu>

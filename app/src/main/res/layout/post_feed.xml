@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_profile_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/pavan" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Pavan Meshram"
+                android:textColor="@color/Black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/post_venue_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_venue" />
+
+            <TextView
+                android:id="@+id/post_venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/post_venue_icon"
+                android:text="Mumbai"
+                android:textColor="@color/Black" />
+
+            <TextView
+                android:id="@+id/post_time"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="2 h" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/post_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Dogs are one of the most loyal animals.
+            Since ages, they have served as the pet animals of households.
+            Their honesty and loyalty have no match."
+            android:textColor="@color/Black" />
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dog2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/post_like"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_like" />
+
+            <ImageView
+                android:id="@+id/post_dislike"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/post_like"
+                android:src="@drawable/ic_dislike" />
+
+            <ImageView
+                android:id="@+id/post_comment"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/post_dislike"
+                android:src="@drawable/ic_comment" />
+
+            <ImageView
+                android:id="@+id/post_share"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/post_comment"
+                android:src="@drawable/ic_share" />
+
+            <ImageView
+                android:id="@+id/post_bookmark"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_bookmark" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/post_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="View All 20 Comments" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#D3D3D3" />
+    </LinearLayout>
+</RelativeLayout>

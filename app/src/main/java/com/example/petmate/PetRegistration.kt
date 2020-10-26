@@ -17,7 +17,5 @@ class PetRegistration : AppCompatActivity() {
 
         val colorDrawable = ColorDrawable(Color.parseColor("#FFC107"))
         supportActionBar?.setBackgroundDrawable(colorDrawable)
-        supportActionBar?.apply {
-        }
     }
 }

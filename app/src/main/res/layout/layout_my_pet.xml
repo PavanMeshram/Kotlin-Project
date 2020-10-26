@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/imageViewMyPet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dog2" />
+
+    <TextView
+        android:id="@+id/petBreedName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Breed: Golden Retriver Dog"
+        android:textSize="19sp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMyPet"
+        app:layout_constraintTop_toTopOf="@+id/imageViewMyPet" />
+
+    <TextView
+        android:id="@+id/petName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: Rocky"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/petBreedName"
+        app:layout_constraintTop_toBottomOf="@+id/petBreedName" />
+
+    <TextView
+        android:id="@+id/petStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Pet Adopted"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/petName"
+        app:layout_constraintTop_toBottomOf="@+id/petName" />
+
+    <TextView
+        android:id="@+id/petNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="@+id/petStatus"
+        app:layout_constraintTop_toBottomOf="@+id/petStatus" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#D3D3D3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:text="@string/pet_mate"
-            android:textSize="36sp" />
+            android:textSize="36sp" /> <!--PetMate Header-->
 
         <ImageView
             android:id="@+id/logo"
@@ -27,14 +27,14 @@
             android:layout_height="200dp"
             android:contentDescription="@string/todo"
             android:padding="10dp"
-            android:src="@drawable/logo" />
+            android:src="@drawable/logo" /> <!--PetMate Logo-->
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_button"
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp" /> <!--Google Sign In-->
 
         <!--<com.facebook.login.widget.LoginButton
             android:id="@+id/login_button"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp" />-->
+            android:layout_marginBottom="30dp" />--> <!--Facebook Sign In-->
 
         <Button
             android:id="@+id/facebook_login_btn"
@@ -53,13 +53,25 @@
             android:layout_marginBottom="30dp"
             android:text="@string/log_in_with_facebook"
             android:textAllCaps="false"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black" /> <!--Facebook Custom Sign In-->
 
         <Button
-            android:id="@+id/btn_petRegistration"
+        android:id="@+id/btn_petRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Pet Registration" /> <!--Pet Registration Button-->
+
+        <Button
+            android:id="@+id/btn_myPet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Go to Pet Registration" />
+            android:text="Go to My Pet" /> <!--My Pet Button-->
+
+        <Button
+            android:id="@+id/btn_homePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Home Page" /> <!--Home Page Button-->
 
     </LinearLayout>
 </ScrollView>

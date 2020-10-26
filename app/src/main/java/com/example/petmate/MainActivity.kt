@@ -4,9 +4,9 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.petmate.mypet.MyPets
 import com.facebook.*
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
@@ -102,6 +102,16 @@ class MainActivity : AppCompatActivity() {
 
         btn_petRegistration.setOnClickListener {
             val myIntent = Intent(this, PetRegistration::class.java)
+            startActivity(myIntent)
+        }
+
+        btn_myPet.setOnClickListener {
+            val myIntent = Intent(this, MyPets::class.java)
+            startActivity(myIntent)
+        }
+
+        btn_homePage.setOnClickListener {
+            val myIntent = Intent(this, Home::class.java)
             startActivity(myIntent)
         }
     } //close onCreate Method
